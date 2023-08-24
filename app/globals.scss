@@ -67,3 +67,19 @@ section {
 .input-shake {
   animation: inputShake 0.5s;
 }
+
+@keyframes linkFlash {
+  0% {
+    @apply text-green-200
+  }
+  50% {
+    @apply text-blue-300
+  }
+  100% {
+    @apply text-green-200
+  }
+}
+
+.link-flash {
+  animation: linkFlash 1s infinite ease;
+}

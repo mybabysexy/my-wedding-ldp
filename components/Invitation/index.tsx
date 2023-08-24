@@ -1,6 +1,8 @@
 "use client";
 
 import {useState} from "react";
+import {SECTION_ANIMATIONS} from "@/components/_animations";
+import {motion} from "framer-motion";
 
 const Invitation = () => {
     const [name, setName] = useState('')
@@ -39,18 +41,30 @@ const Invitation = () => {
         }
     }
 
-    return <section className={'bg-purple-900'}>
+    return <motion.section className={'bg-purple-900'} {...SECTION_ANIMATIONS}>
         <div className='container'>
             <h3 className={'text-center text-white'}>Chung vui cùng chúng mình nhé!</h3>
-            <div className={'flex justify-center'}>
+            <motion.div className={'flex justify-center'} initial={{
+                opacity: 0,
+                y: 100,
+            }} whileInView={{
+                opacity: 1,
+                y: 0,
+            }}>
                 <div className={`px-5 py-2 bg-white w-full max-w-[500px] flex justify-center rounded-2xl ${!valid ? 'input-shake' : ''}`}>
                     <input type='text' name={'fullname'} placeholder={'Tên của bạn'}
                            value={name} onChange={(e) => setName(e.target.value)}
                            readOnly={loading || submitted}
                            className={'bg-white outline-none text-3xl text-center w-full'}/>
                 </div>
-            </div>
-            <div className={'flex justify-center mt-4'}>
+            </motion.div>
+            <motion.div className={'flex justify-center mt-4'} initial={{
+                opacity: 0,
+                y: 100,
+            }} whileInView={{
+                opacity: 1,
+                y: 0,
+            }}>
                 {
                     submitted ? <div className="text-3xl text-white">
                         {
@@ -72,9 +86,9 @@ const Invitation = () => {
                     </>
                 }
 
-            </div>
+            </motion.div>
         </div>
-    </section>;
+    </motion.section>;
 }
 
 export default Invitation;
