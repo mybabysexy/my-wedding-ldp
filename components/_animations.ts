@@ -2,7 +2,7 @@ export const SECTION_ANIMATIONS = {
     variants: {
         offscreen: {
             opacity: 0,
-            y: 100,
+            y: 50,
         },
         onscreen: {
             opacity: 1,
@@ -38,7 +38,7 @@ export const POP_FROM_CENTER = {
 export const SLIDE_FROM_BOTTOM = {
     hidden: {
         opacity: 0,
-        y: 100,
+        y: 50,
     },
     visible: {
         opacity: 1,

@@ -72,6 +72,14 @@ const Donate = () => {
                                     }}>
                             <Image src={BAU_3} alt='Bâu nằm phè' height={80} className={'ml-3 cursor-progress'}/>
                         </motion.div>
+                        <div className="hidden">
+                            <Image src={FULL_QR} alt='QR'
+                                   placeholder={'blur'}
+                                   height={300} priority={true}/>
+                            <Image src={BAU_QR} alt='QR'
+                                   placeholder={'blur'}
+                                   height={300} priority={true}/>
+                        </div>
                         {
                             done ? <div className={'px-6 py-12'}>
                                     <div className={'flex justify-center'}>
@@ -83,7 +91,7 @@ const Donate = () => {
                                     <div className='mt-4'>
                                         <button
                                             onClick={reset}
-                                            className={'rounded-2xl px-4 py-3 bg-red-300 hover:bg-red-400 transition w-full'}>
+                                            className={'rounded-2xl px-4 py-3 bg-pink hover:bg-red-400 transition w-full'}>
                                             <span className={'text-xl'}>Ủng hộ thêm</span>
                                         </button>
                                     </div>
@@ -104,7 +112,7 @@ const Donate = () => {
                                                     </button>
                                                     <button
                                                         onClick={handleFinish}
-                                                        className={'rounded-2xl px-4 py-3 bg-red-300 hover:bg-red-400 transition w-full'}>
+                                                        className={'rounded-2xl px-4 py-3 bg-pink hover:bg-red-400 transition w-full'}>
                                                         <span className={'text-xl'}>Xong</span>
                                                     </button>
                                                 </div>
@@ -113,21 +121,21 @@ const Donate = () => {
                                                         variants={SLIDE_FROM_BOTTOM} initial={'hidden'}
                                                         whileInView={'visible'}>
                                                 <div onClick={() => handleShowQR('catrang')}
-                                                     className={'border-2 border-red-400 rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
+                                                     className={'border-2 border-pink rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
                                                     <Image src={CATRANG} alt='Catrang' className={'w-full'}/>
                                                     <div className='px-4 pb-4'>
                                                         <button
-                                                            className={'rounded-2xl px-4 py-3 bg-red-300 hover:bg-red-400 transition w-full'}>
+                                                            className={'rounded-2xl px-4 py-3 bg-pink hover:bg-red-400 transition w-full'}>
                                                             <span className={'text-xl'}>🛒</span>
                                                         </button>
                                                     </div>
                                                 </div>
                                                 <div onClick={() => handleShowQR('ciao')}
-                                                     className={'border-2 border-red-400 rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
+                                                     className={'border-2 border-pink rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
                                                     <Image src={CIAO} alt='Catrang' className={'w-full p-6'}/>
                                                     <div className='px-4 pb-4'>
                                                         <button
-                                                            className={'rounded-2xl px-4 py-3 bg-red-300 hover:bg-red-400 transition w-full'}>
+                                                            className={'rounded-2xl px-4 py-3 bg-pink hover:bg-red-400 transition w-full'}>
                                                             <span className={'text-xl'}>🛒</span>
                                                         </button>
                                                     </div>

@@ -8,7 +8,7 @@ import {POP_FROM_CENTER, SECTION_ANIMATIONS} from "@/components/_animations";
 
 const AboutUs = () => {
     return (
-        <motion.section className={'bg-orange-100'} {...SECTION_ANIMATIONS}>
+        <motion.section className={'bg-secondary'} {...SECTION_ANIMATIONS}>
             <div className='container'>
                 <h3 className={'text-center'}>Ơ đám cưới ai nhỉ?</h3>
                 <motion.div className={'flex flex-col md:flex-row gap-10 md:gap-20 justify-center'}
