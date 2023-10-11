@@ -10,7 +10,7 @@ import LoveFirstSight from "@/components/LoveFirstSight";
 
 export default function Home() {
     return (
-        <main>
+        <>
             <Header />
             <Carousel />
             <SaveTheDate />
@@ -20,6 +20,6 @@ export default function Home() {
             <PhotoAlbum />
             <Invitation />
             <Donate />
-        </main>
+        </>
     )
 }

@@ -58,7 +58,7 @@ const Donate = () => {
                     </div>
                 </div>
                 <div className='col-span-2'>
-                    <div className={'rounded-2xl bg-white drop-shadow-xl relative'}>
+                    <div className={'rounded-2xl bg-secondary drop-shadow-xl relative'}>
                         <motion.div className={'absolute top-[-35px] right-5'}
                                     initial={{
                                         y: -50,
@@ -121,7 +121,7 @@ const Donate = () => {
                                                         variants={SLIDE_FROM_BOTTOM} initial={'hidden'}
                                                         whileInView={'visible'}>
                                                 <div onClick={() => handleShowQR('catrang')}
-                                                     className={'border-2 border-pink rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
+                                                     className={'border-2 bg-white border-pink rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
                                                     <Image src={CATRANG} alt='Catrang' className={'w-full'}/>
                                                     <div className='px-4 pb-4'>
                                                         <button
@@ -131,7 +131,7 @@ const Donate = () => {
                                                     </div>
                                                 </div>
                                                 <div onClick={() => handleShowQR('ciao')}
-                                                     className={'border-2 border-pink rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
+                                                     className={'border-2 bg-white border-pink rounded-2xl w-[300px] overflow-hidden flex flex-col justify-center cursor-pointer'}>
                                                     <Image src={CIAO} alt='Catrang' className={'w-full p-6'}/>
                                                     <div className='px-4 pb-4'>
                                                         <button

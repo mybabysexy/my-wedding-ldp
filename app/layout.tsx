@@ -2,6 +2,8 @@ import './globals.scss'
 import type {Metadata} from 'next'
 import {Bellota} from 'next/font/google'
 import React from "react";
+import Image from "next/image";
+import BG from '@/public/bg.jpg'
 
 const font = Bellota({weight: '400', subsets: ['latin']})
 
@@ -19,7 +21,14 @@ export default function RootLayout({children}: {
 }) {
     return (
         <html lang="en">
-        <body className={font.className} id={'root'}>{children}</body>
+        <body className={font.className}>
+            <div className='fixed w-[100vw] h-[100vh] top-0 left-0'>
+                <Image src={BG} alt={'bg'} fill objectFit={'cover'}/>
+            </div>
+            <main id={'root'} className={'relative'}>
+                {children}
+            </main>
+        </body>
         </html>
     )
 }
