@@ -41,51 +41,49 @@ const Invitation = () => {
         }
     }
 
-    return <motion.section className={'bg-purple-900'} {...SECTION_ANIMATIONS}>
-        <div className='container'>
+    return <motion.section className={'bg-purple-900 relative'} {...SECTION_ANIMATIONS}>
+        <video autoPlay loop muted className={'absolute top-0 left-0 w-full h-full object-cover object-bottom'}>
+            <source src="/bg2.mp4" type="video/mp4" />
+        </video>
+        <div className='container relative'>
             <h3 className={'text-center text-white'}>Chung vui cùng chúng mình nhé!</h3>
-            <motion.div className={'flex justify-center'} initial={{
+            <motion.div initial={{
                 opacity: 0,
                 y: 100,
             }} whileInView={{
                 opacity: 1,
                 y: 0,
             }}>
-                <div className={`px-5 py-2 bg-white w-full max-w-[500px] flex justify-center rounded-2xl ${!valid ? 'input-shake' : ''}`}>
-                    <input type='text' name={'fullname'} placeholder={'Tên của bạn'}
-                           value={name} onChange={(e) => setName(e.target.value)}
-                           readOnly={loading || submitted}
-                           className={'bg-white outline-none text-3xl text-center w-full'}/>
+                <div className={'flex justify-center'}>
+                    <div className={`px-5 py-2 bg-white w-full max-w-[500px] flex justify-center rounded-2xl ${!valid ? 'input-shake' : ''}`}>
+                        <input type='text' name={'fullname'} placeholder={'Tên của bạn'}
+                               value={name} onChange={(e) => setName(e.target.value)}
+                               readOnly={loading || submitted}
+                               className={'bg-white outline-none text-3xl text-center w-full'}/>
+                    </div>
                 </div>
-            </motion.div>
-            <motion.div className={'flex justify-center mt-4'} initial={{
-                opacity: 0,
-                y: 100,
-            }} whileInView={{
-                opacity: 1,
-                y: 0,
-            }}>
-                {
-                    submitted ? <div className="text-3xl text-white">
-                        {
-                            willAttend ? `Yayy hẹn gặp ${name} tại bữa tiêc!` : 'Chúng mình sẽ tiếc khi bạn không thể đến :(('
-                        }
-                    </div> : <>
-                        <div className={'flex gap-4 w-full max-w-[500px]'}>
-                            <button onClick={() => handleOnSubmit(false)}
-                                    disabled={loading}
-                                    className={'px-5 py-3 rounded-2xl w-full bg-gray-500 transition hover:bg-gray-600 font-bold text-xl text-gray-800'}>
-                                Mình bận mất rồi
-                            </button>
-                            <button onClick={() => handleOnSubmit(true)}
-                                    disabled={loading}
-                                    className={'px-5 py-3 rounded-2xl w-full bg-green-500 transition hover:bg-green-400 font-bold text-xl text-white'}>
-                                Mình sẽ đến
-                            </button>
-                        </div>
-                    </>
-                }
-
+                <div className={'flex justify-center mt-4'}>
+                    {
+                        submitted ? <div className="text-3xl text-white">
+                            {
+                                willAttend ? `Yayy hẹn gặp ${name} tại bữa tiêc!` : 'Chúng mình sẽ tiếc khi bạn không thể đến :(('
+                            }
+                        </div> : <>
+                            <div className={'flex gap-4 w-full max-w-[500px]'}>
+                                <button onClick={() => handleOnSubmit(false)}
+                                        disabled={loading}
+                                        className={'px-5 py-3 rounded-2xl w-full bg-gray-500 transition hover:bg-gray-600 font-bold text-xl text-gray-800'}>
+                                    Mình bận mất rồi
+                                </button>
+                                <button onClick={() => handleOnSubmit(true)}
+                                        disabled={loading}
+                                        className={'px-5 py-3 rounded-2xl w-full bg-green-500 transition hover:bg-green-400 font-bold text-xl text-white'}>
+                                    Mình sẽ đến
+                                </button>
+                            </div>
+                        </>
+                    }
+                </div>
             </motion.div>
         </div>
     </motion.section>;

@@ -8,8 +8,9 @@ import BANNER from '@/public/banner.jpg'
 const Carousel = () => {
     return (
         <motion.section {...SECTION_ANIMATIONS} className={'relative'}>
-            <Image src={BANNER} alt={'Softwater'} className={'object-cover object-bottom'} fill={true}
+            <Image src={BANNER} alt={'Softwater'} className={'object-cover object-center'} fill={true}
                    quality={80}
+                   priority
                    placeholder={'blur'} style={{
                 filter: 'brightness(0.6)'
             }}/>
