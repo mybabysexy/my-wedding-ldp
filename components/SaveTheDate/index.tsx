@@ -6,7 +6,7 @@ import {POP_FROM_CENTER, SECTION_ANIMATIONS, SLIDE_FROM_BOTTOM} from "@/componen
 const SaveTheDate = () => {
     return (
         <motion.section {...SECTION_ANIMATIONS} className={'relative'}>
-            <video autoPlay loop muted className={'absolute top-0 left-0 w-full h-full object-cover object-bottom'}>
+            <video autoPlay loop muted playsInline className={'absolute top-0 left-0 w-full h-full object-cover object-bottom'}>
                 <source src="/bg1.mp4" type="video/mp4" />
             </video>
             <div className='container relative'>

@@ -18,6 +18,7 @@ const LoveFirstSight = () => {
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
             backgroundPosition: 'center bottom',
+            willChange: 'transform',
         }}>
             <div className='container z-0'>
                 <div className={'flex justify-center'}>
