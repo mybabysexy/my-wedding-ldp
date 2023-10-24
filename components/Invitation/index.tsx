@@ -4,8 +4,8 @@ import {useState} from "react";
 import {SECTION_ANIMATIONS} from "@/components/_animations";
 import {motion} from "framer-motion";
 
-const Invitation = () => {
-    const [name, setName] = useState('')
+const Invitation = ({invitee}: {invitee: string | null}) => {
+    const [name, setName] = useState(invitee || '');
     const [valid, setValid] = useState(true)
     const [willAttend, setWillAttend] = useState(false)
     const [submitted, setSubmitted] = useState(false)
@@ -46,7 +46,14 @@ const Invitation = () => {
             <source src="/bg2.mp4" type="video/mp4" />
         </video>
         <div className='container relative'>
-            <h3 className={'text-center text-white'}>Chung vui cùng chúng mình nhé!</h3>
+            <div className={'flex justify-center'}>
+                <div className={'bg-black bg-opacity-20 px-10 py-5 rounded-2xl'}>
+                    {
+                        invitee && <h3 className={'text-center text-white mb-7'}>Helu <span className={'font-bold'}>{invitee}</span>!</h3>
+                    }
+                    <h3 className={'text-center text-white'}>Chung vui cùng chúng mình nhé!</h3>
+                </div>
+            </div>
             <motion.div initial={{
                 opacity: 0,
                 y: 100,
@@ -54,14 +61,16 @@ const Invitation = () => {
                 opacity: 1,
                 y: 0,
             }}>
-                <div className={'flex justify-center'}>
-                    <div className={`px-5 py-2 bg-white w-full max-w-[500px] flex justify-center rounded-2xl ${!valid ? 'input-shake' : ''}`}>
-                        <input type='text' name={'fullname'} placeholder={'Tên của bạn'}
-                               value={name} onChange={(e) => setName(e.target.value)}
-                               readOnly={loading || submitted}
-                               className={'bg-white outline-none text-3xl text-center w-full'}/>
+                {
+                    !invitee && <div className={'flex justify-center'}>
+                        <div className={`px-5 py-2 bg-white w-full max-w-[500px] flex justify-center rounded-2xl ${!valid ? 'input-shake' : ''}`}>
+                            <input type='text' name={'fullname'} placeholder={'Tên của bạn'}
+                                   value={name} onChange={(e) => setName(e.target.value)}
+                                   readOnly={loading || submitted}
+                                   className={'bg-white outline-none text-3xl text-center w-full'}/>
+                        </div>
                     </div>
-                </div>
+                }
                 <div className={'flex justify-center mt-4'}>
                     {
                         submitted ? <div className="text-3xl text-white">

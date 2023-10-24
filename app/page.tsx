@@ -8,7 +8,8 @@ import Invitation from "@/components/Invitation";
 import Donate from "@/components/Donate";
 import LoveFirstSight from "@/components/LoveFirstSight";
 
-export default function Home() {
+// @ts-ignore
+export default function Home(props) {
     return (
         <>
             <Header />
@@ -18,7 +19,7 @@ export default function Home() {
             <AboutUs />
             <LoveFirstSight />
             <PhotoAlbum />
-            <Invitation />
+            <Invitation invitee={props.invitee} />
             <Donate />
         </>
     )

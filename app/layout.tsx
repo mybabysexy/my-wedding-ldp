@@ -12,7 +12,9 @@ export const metadata: Metadata = {
     description: 'Đám cưới nho nhỏ của chúng mình',
     openGraph: {
         authors: 'duc1067',
-        images: '/album/2.jpg',
+        images: {
+            url: '/album/2.jpg',
+        },
     }
 }
 
