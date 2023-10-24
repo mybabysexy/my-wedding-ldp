@@ -10,6 +10,7 @@ const font = Bellota({weight: '400', subsets: ['latin']})
 export const metadata: Metadata = {
     title: 'Wedding of Duc & Xuan',
     description: 'Đám cưới nho nhỏ của chúng mình',
+    metadataBase: new URL('https://wedding.duc1607.id.vn'),
     openGraph: {
         authors: 'duc1067',
         images: {

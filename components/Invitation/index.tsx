@@ -75,7 +75,7 @@ const Invitation = ({invitee}: {invitee: string | null}) => {
                     {
                         submitted ? <div className="text-3xl text-white">
                             {
-                                willAttend ? `Yayy hẹn gặp ${name} tại bữa tiêc!` : 'Chúng mình sẽ tiếc khi bạn không thể đến :(('
+                                willAttend ? `Yayy hẹn gặp ${name} tại bữa tiệc!` : 'Chúng mình sẽ tiếc khi bạn không thể đến :(('
                             }
                         </div> : <>
                             <div className={'flex gap-4 w-full max-w-[500px]'}>

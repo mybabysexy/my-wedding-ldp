@@ -55,6 +55,9 @@ const Donate = () => {
                             <h3>Bâu có hạt</h3>
                             <Image src={BAU_2} alt='Bâu hóng' height={60} className={'ml-3'}/>
                         </div>
+                        <div className={'text-gray-500 mt-4'}>
+                            <i>(và mừng hạnh phúc tới chúng mình)</i>
+                        </div>
                     </div>
                 </div>
                 <div className='col-span-2'>
