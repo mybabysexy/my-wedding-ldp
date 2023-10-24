@@ -46,7 +46,7 @@ const Invitation = ({invitee}: {invitee: string | null}) => {
             <source src="/bg2.mp4" type="video/mp4" />
         </video>
         <div className='container relative'>
-            <div className={'flex justify-center'}>
+            <div className={'flex justify-center mb-4'}>
                 <div className={'bg-black bg-opacity-20 px-10 py-5 rounded-2xl'}>
                     {
                         invitee && <h3 className={'text-center text-white mb-7'}>Helu <span className={'font-bold'}>{invitee}</span>!</h3>
